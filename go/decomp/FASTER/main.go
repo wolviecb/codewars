@@ -15,7 +15,7 @@ type results struct {
 	count int
 }
 
-/* BEGIN STACKOVERFLOW COPYPASTA */
+/* BEGIN STACKOVERFLOW COPYPASTA https://github.com/aht/gosieve */
 // Wheel to quickly generate numbers coprime to 2, 3, 5 and 7.
 // Starting from 13, we successively add wheel[i] to get 17, 19, 23, ...
 var wheel = []int{
@@ -126,7 +126,7 @@ func sendproxy(out chan<- int) chan<- int {
 	return proxy
 }
 
-// Return a chan int of primes.
+// Sieve Return a chan int of primes.
 func Sieve() chan int {
 	// The output values.
 	out := make(chan int, 1024)
@@ -197,7 +197,7 @@ func Sieve() chan int {
 	return out
 }
 
-/* END STACKOVERFLOW COPYPASTA */
+/* END STACKOVERFLOW COPYPASTA https://github.com/aht/gosieve */
 
 func runSieve(n int) []int {
 	p := []int{}

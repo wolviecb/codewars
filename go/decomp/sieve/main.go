@@ -9,6 +9,8 @@ import (
 	"strings"
 )
 
+/* BEGIN STACKOVERFLOW COPYPASTA https://github.com/aht/gosieve */
+
 // Wheel to quickly generate numbers coprime to 2, 3, 5 and 7.
 // Starting from 13, we successively add wheel[i] to get 17, 19, 23, ...
 var wheel = []int{
@@ -189,6 +191,8 @@ func Sieve() chan int {
 
 	return out
 }
+
+/* END STACKOVERFLOW COPYPASTA https://github.com/aht/gosieve */
 
 func runSieve(n int) []int {
 	p := []int{}
