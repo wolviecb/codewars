@@ -43,10 +43,7 @@ func TestDecomp(t *testing.T) {
 	}
 }
 
-func BenchmarkDecomp(b *testing.B) {
-	for _, tc := range tt {
-		for i := 0; i < b.N; i++ {
-			_ = decomp(tc.i)
-		}
-	}
-}
+func BenchmarkDecomp5(b *testing.B)    { decomp(5) }
+func BenchmarkDecomp17(b *testing.B)   { decomp(17) }
+func BenchmarkDecomp25(b *testing.B)   { decomp(25) }
+func BenchmarkDecomp9001(b *testing.B) { decomp(9001) }
